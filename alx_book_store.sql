@@ -1,5 +1,7 @@
+-- Check if the database exists, create it if not
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 
+-- Use the database
 USE alx_book_store;
 
 -- Authors Table
@@ -31,7 +33,7 @@ CREATE TABLE IF NOT EXISTS orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) -- Corrected to lowercase 'customers'
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
 -- Order_Details Table
